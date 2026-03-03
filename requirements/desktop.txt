@@ -1,0 +1,6 @@
+PySide6
+rawpy
+lensfunpy
+opencv-python-headless
+pillow
+numpy

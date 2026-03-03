@@ -1,0 +1,43 @@
+[
+  {
+    "id": "sigma_15mm_f14_dg_dn_diagonal_fisheye_art_sony_e",
+    "source": "panostitch",
+    "manufacturer": "Sigma",
+    "camera_display": "Sony A7R III",
+    "lens_display": "Sigma 15mm F1.4 DG DN Diagonal Fisheye | Art",
+    "lens_aliases": [
+      "15mm F1.4 DG DN DIAGONAL FISHEYE | Art 024",
+      "15mm F1.4 DG DN Diagonal Fisheye | Art",
+      "Sigma 15mm F1.4 DG DN DIAGONAL FISHEYE | Art 024",
+      "Sigma 15mm F1.4 DG DN Diagonal Fisheye | Art"
+    ],
+    "camera_aliases": [
+      "SONY ILCE-7RM3",
+      "Sony ILCE-7RM3",
+      "ILCE-7RM3",
+      "Sony A7R III"
+    ],
+    "mount": "Sony E",
+    "sensor_format": "full-frame",
+    "projection": "diagonal_fisheye",
+    "fisheye_mapping": "equisolid",
+    "focal_length_mm": 15.0,
+    "diagonal_fov_deg": 180.0,
+    "lensfun_name": null,
+    "notes": "Primary working profile for Sony A7R III fisheye correction.",
+    "preset_overrides": {
+      "output_projection": "cylindrical",
+      "horizontal_fov_deg": 118.0,
+      "yaw_deg": 0.0,
+      "pitch_deg": -7.5,
+      "roll_deg": 0.0,
+      "zoom": 1.04,
+      "vertical_shift": -0.02,
+      "post_rotate_deg": 0.0,
+      "curve_straighten": 0.0,
+      "curve_anchor_y": -0.75,
+      "curve_span": 0.55,
+      "safe_margin": 0.02
+    }
+  }
+]

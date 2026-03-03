@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "panostitch"
+version = "0.1.0"
+description = "Linux-first desktop app for fisheye correction and panorama stitching workflows."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "PySide6",
+  "rawpy",
+  "lensfunpy",
+  "opencv-python-headless",
+  "pillow",
+  "numpy",
+]
+
+[project.optional-dependencies]
+vips = ["pyvips"]
+
+[project.scripts]
+panostitch = "panostitch.__main__:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+panostitch = ["data/*.json"]

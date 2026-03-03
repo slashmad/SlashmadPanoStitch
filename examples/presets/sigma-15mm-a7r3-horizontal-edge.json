@@ -1,0 +1,37 @@
+{
+  "name": "Sigma 15mm A7R III horizontal edge",
+  "camera": {
+    "manufacturer": "Sony",
+    "model": "Sony A7R III",
+    "sensor_format": "full-frame"
+  },
+  "lens": {
+    "manufacturer": "Sigma",
+    "model": "Sigma 15mm F1.4 DG DN Diagonal Fisheye | Art",
+    "mount": "Sony E",
+    "sensor_format": "full-frame",
+    "projection": "diagonal_fisheye",
+    "fisheye_mapping": "equisolid",
+    "focal_length_mm": 15.0,
+    "diagonal_fov_deg": 180.0,
+    "lensfun_name": null,
+    "notes": "Manual start profile for the Sigma 15mm on Sony A7R III. Tune after visual calibration."
+  },
+  "output_frame": {
+    "width": 3840,
+    "height": 2160
+  },
+  "output_projection": "cylindrical",
+  "horizontal_fov_deg": 118.0,
+  "yaw_deg": 0.0,
+  "pitch_deg": -7.5,
+  "roll_deg": 0.0,
+  "zoom": 1.04,
+  "vertical_shift": -0.02,
+  "post_rotate_deg": 0.0,
+  "curve_straighten": 0.0,
+  "curve_anchor_y": -0.75,
+  "curve_span": 0.55,
+  "safe_margin": 0.02,
+  "notes": "Start preset for flattening a slightly upward-tilted fisheye capture while keeping crop under control."
+}
