@@ -99,35 +99,31 @@ Current work already includes:
 
 ## Local Runtime and Cache
 
-By default, PanoStitch prefers a fast local runtime root at:
-
-```bash
-/run/media/stolpee/localprog/panostitch
-```
-
-That location is used for the local virtual environment, pip cache, temporary files, and panorama preview cache when writable.
-
-You can override it with:
+PanoStitch prefers a fast local runtime root when one is configured through the environment:
 
 ```bash
 PANOSTITCH_LOCAL_ROOT=/path/to/fast/storage
 ```
 
-For best results, use a fast local SSD or NVMe volume.
+That location is used for the local virtual environment, pip cache, temporary files, and panorama preview cache when writable.
+
+If no override is provided, the app uses its built-in runtime path resolution and falls back to a project-local cache when needed.
+
+For best results, point `PANOSTITCH_LOCAL_ROOT` to a fast local SSD or NVMe volume.
 
 ## Getting Started
 
 ### Start the app
 
 ```bash
-cd /mnt/p3-raidz2/linux-projects/panostitch
+cd panostitch
 ./run-panostitch.sh
 ```
 
 ### Bootstrap the local environment
 
 ```bash
-cd /mnt/p3-raidz2/linux-projects/panostitch
+cd panostitch
 python3 scripts/bootstrap_local_env.py
 ```
 
@@ -136,15 +132,17 @@ python3 scripts/bootstrap_local_env.py
 Use the project-local interpreter, not whichever `python` happens to be active in the shell:
 
 ```bash
-/run/media/stolpee/localprog/panostitch/venvs/default/bin/python -m pip install -r requirements/desktop.txt
-/run/media/stolpee/localprog/panostitch/venvs/default/bin/python -m pip install --no-deps -e .
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements/desktop.txt
+python -m pip install --no-deps -e .
 ```
 
 ## Testing
 
 ```bash
-cd /mnt/p3-raidz2/linux-projects/panostitch
-/run/media/stolpee/localprog/panostitch/venvs/default/bin/python -m unittest discover -s tests
+cd panostitch
+python -m unittest discover -s tests
 ```
 
 ## Repository Layout
